@@ -19,7 +19,6 @@ app.get('/', (req, res) =>
 );
 
 // GET Route for notes page
-<<<<<<< HEAD
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
@@ -27,15 +26,6 @@ app.get('/notes', (req, res) =>
 // Wildcard route to direct users to a 404 page
 app.get('*', (req, res) =>
   res.sendFile(path.join(__dirname, 'public/index.html'))
-=======
-app.get("/notes", (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/pages/notes.html'))
-);
-
-// if any other url paramter is added go to index.html
-app.get("*", (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
->>>>>>> 004a403c61e325ba8881cda4f3a20d65ff529399
 );
 
 app.listen(PORT, () =>
