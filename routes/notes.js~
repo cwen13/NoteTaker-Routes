@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const notes = require('express').Router();
 const {
   readFromFile,
@@ -33,3 +34,6 @@ notes.post("/", (req,res) => {
 });
 
 module.exports = notes;
+=======
+// notes api
+>>>>>>> 004a403c61e325ba8881cda4f3a20d65ff529399
