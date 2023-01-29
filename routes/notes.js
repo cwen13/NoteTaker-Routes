@@ -1,7 +1,6 @@
 // notes api
 const notes = require('express').Router();
-//const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
-//const uuid = require('../helpers/uuid');
+const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 
 // /api/feedback
 // GET Route for retrieving all the feedback
