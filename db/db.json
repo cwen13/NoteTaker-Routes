@@ -1,5 +1,12 @@
 [
     {
+        "title": "Test Title",
+        "text": "Test text"
+    },
+    {
+        "title": "The note of notes",
+        "text": "Thex text of text"
+    },
         "title":"Test Title",
         "text":"Test text"
     }
