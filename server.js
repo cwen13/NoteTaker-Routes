@@ -1,14 +1,8 @@
 const express = require('express');
 const path = require('path');
-<<<<<<< HEAD
 const api = require('./routes/index.js');
 
 const PORT = process.env.PORT || 3001;
-=======
-const notes = require('./routes/notes.js');
-
-const PORT = 80;
->>>>>>> 004a403c61e325ba8881cda4f3a20d65ff529399
 
 const app = express();
 
