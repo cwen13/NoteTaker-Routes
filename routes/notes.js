@@ -37,13 +37,14 @@ notes.post("/", (req,res) => {
   }
 });
 
-notes.delete("/:id", (req,res) => {
+notes.delete("/:id", async (req,res) => {
   console.log(req.params.id);
-  readFromFile("./db/db.json")
-    .then((data) => JSON.parse(data))
-    .then((data) => data.filter((entry) => {return entry.id !== req.params.id}))
-    .then((data) => writeToFile("./db/db.json", data))
-    .then(() => res.json("note removed"));
-  });
-  
+  let data = await readFromFile("./db/db.json")
+  data = (JSON.parse(data)).filter((entry) => {return entry.id !== req.params.id});
+  writeToFile("./db/db.json", data);
+  return res.json("note removed");
+});
+
+
+
 module.exports = notes;
